@@ -1,31 +1,65 @@
-html, body {
-    font-family: Arial, sans-serif;
-    background-color: #FDFCD2;
+body {
     margin: 0;
-}
-
-.main-content {
-    margin: 35px;
-}
-
-.background-overlay {
-    height: calc(100vh - 70px);
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    color: white;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-image: url('villa-bliss-bali.JPEG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    height: 100vh;
 }
-
-#countdown {
-    font-size: 48px;
-    color: #EDEDED;
+.timer {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 35px;
-    margin: 20px;
+    padding: 20px;
+}
+.timer h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.countdown div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+}
+.countdown div span {
+    display: block;
+    font-size: 2em;
+}
+.countdown div label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: block;
+}
+@media (max-width: 600px) {
+    .countdown div {
+        width: 80px;
+        padding: 15px;
+    }
+    .countdown div span {
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 400px) {
+    .timer h1 {
+        font-size: 1.5em;
+    }
+    .countdown div {
+        width: 60px;
+        padding: 10px;
+    }
+    .countdown div span {
+        font-size: 1.2em;
+    }
+    .countdown div label {
+        font-size: 0.7em;
+    }
 }

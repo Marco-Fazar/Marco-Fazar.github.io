@@ -30,8 +30,11 @@ function updateCountdown(targetDate, countdown) {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result
-    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+    
     // If the countdown is over
     if (distance < 0) {
         clearInterval(countdown);
