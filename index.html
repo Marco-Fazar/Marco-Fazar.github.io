@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marco-Fazar | Countdown</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Marco &#10084; Fazar | Countdown</title>
     <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
     <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+    <link href="https://fonts.cdnfonts.com/css/sf-compact-display" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
@@ -15,9 +16,27 @@
     </header>
     <main>
         <div class="main-content">
-            <div class="background-overlay">
-                <div id="countdown"></div>
+            <div class="timer" id="countdownContent">
+                <div class="countdown">
+                    <div class="time-block">
+                        <span id="days"></span>
+                        <label>Days</label>
+                    </div>
+                    <div class="time-block">
+                        <span id="hours"></span>
+                        <label>Hours</label>
+                    </div>
+                    <div class="time-block">
+                        <span id="minutes"></span>
+                        <label>Minutes</label>
+                    </div>
+                    <div class="time-block">
+                        <span id="seconds"></span>
+                        <label>Seconds</label>
+                    </div>
+                </div>
             </div>
+            <div id="countdownEnded"></div>
         </div>
     </main>
     <footer>
