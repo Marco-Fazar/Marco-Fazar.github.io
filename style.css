@@ -19,9 +19,9 @@ body {
 
 .countdown {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    justify-content: center;
 }
 
     .countdown .time-block {
