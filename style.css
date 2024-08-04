@@ -1,65 +1,85 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
-    color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/jakarta-skyline.JPEG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'SF Compact Display', Arial, sans-serif;
+    color: #FFF;
+    margin: 0;
 }
+
 .timer {
     text-align: center;
     padding: 20px;
 }
-.timer h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+
 .countdown {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
-.countdown div {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+
+    .countdown .time-block {
+        width: 100px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+        .countdown .time-block span {
+            display: block;
+            font-size: 2em;
+        }
+
+        .countdown .time-block label {
+            display: block;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+#countdownEnded {
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    width: 100px;
-}
-.countdown div span {
-    display: block;
     font-size: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
 }
-.countdown div label {
-    font-size: 0.8em;
-    text-transform: uppercase;
-    margin-top: 5px;
-    display: block;
-}
-@media (max-width: 600px) {
-    .countdown div {
+
+@media (max-width: 768px) {
+    .countdown .time-block {
         width: 80px;
         padding: 15px;
     }
-    .countdown div span {
-        font-size: 1.5em;
-    }
+
+        .countdown .time-block span,
+        #countdownEnded {
+            font-size: 1.5em;
+        }
 }
-@media (max-width: 400px) {
-    .timer h1 {
-        font-size: 1.5em;
-    }
-    .countdown div {
+
+@media (max-width: 576px) {
+    .countdown .time-block {
         width: 60px;
         padding: 10px;
     }
-    .countdown div span {
-        font-size: 1.2em;
-    }
-    .countdown div label {
-        font-size: 0.7em;
-    }
+
+        .countdown .time-block span,
+        #countdownEnded {
+            font-size: 1.2em;
+        }
+
+        .countdown .time-block label {
+            font-size: 0.7em;
+        }
 }
